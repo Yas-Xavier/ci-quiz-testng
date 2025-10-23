@@ -27,14 +27,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building Maven project...'
-                sh 'mvn -B -q clean compile'
+                bat 'mvn -B -q clean compile'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running TestNG tests...'
-                sh 'mvn -B -q test'
+                bat 'mvn -B -q test'
             }
             post {
                 always {
