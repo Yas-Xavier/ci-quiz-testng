@@ -26,8 +26,10 @@ pipeline {
 
         stage('Test') {
             steps {
+                dir('FinalMavenTestNG') {
                 echo 'Running TestNG tests...'
                 bat 'mvn -B -q test'
+                }
             }
             post {
                 always {
