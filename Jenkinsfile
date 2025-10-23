@@ -24,13 +24,6 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                echo 'Building Maven project...'
-                bat 'mvn -B -q clean compile'
-            }
-        }
-
         stage('Test') {
             steps {
                 echo 'Running TestNG tests...'
